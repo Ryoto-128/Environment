@@ -1,0 +1,17 @@
+# python install
+
+# install site ------------------------------------------------------------
+https://www.python.org/
+install python-installer-forWindows
+#install method -----------------------------------------------------------
+https://www.javadrive.jp/python/install/index1.html
+
+# pyenv(Windows非対応) pyenv-win install -----------------------------------
+$ git clone https://github.com/pyenv-win/pyenv-win
+名前変更=[.pyenv]
+環境変数 %USERPROFILE% が指すディレクトリ(多くの場合は C:\Users\[ユーザ名] )に展開
+環境変数追加
+ - 環境変数 PYENV : %USERPROFILE%\.pyenv\pyenv-win
+ - 環境変数 Path : %PYENV%\bin , %PYENV%\shims
+
+https://qiita.com/akym03/items/3576842eed0e9d28cf82
