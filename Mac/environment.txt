@@ -1,23 +1,27 @@
-# Homebrew
+# command line
+    # Homebrew
 
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-
-
-# Homebrew-cask
-
-export HOMEBREW_CASK_OPTS='--appdir=/Applications'
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 
-# GUIapp
+    # Homebrew-cask
 
-brew cask install \
-    google-chrome \
-    slack \
-    visual-studio-code \
-    google-drive-file-stream \
+    export HOMEBREW_CASK_OPTS='--appdir=/Applications'
 
-    
 
-# git
+    # GUIapp
 
-brew install git
+    brew cask install \
+        google-chrome \
+        slack \
+        visual-studio-code \
+        google-drive-file-stream \
+
+
+    # git
+
+    brew install git
+
+
+# AppStore
+    trello
