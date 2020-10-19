@@ -3,11 +3,9 @@
 
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
-
     # Homebrew-cask
 
     export HOMEBREW_CASK_OPTS='--appdir=/Applications'
-
 
     # GUIapp
 
@@ -17,10 +15,29 @@
         visual-studio-code \
         google-drive-file-stream \
 
-
     # git
 
     brew install git
+    
+    # node.js
+    
+    # nodebrew:バージョン管理
+    
+    brew install nodebrew
+    echo 'export PATH=$PATH:$HOME/.nodebrew/current/bin' >> ~/.bash_profile
+    source ~/.bash_profile  #bashの場合
+    echo 'export PATH=$HOME/.nodebrew/current/bin:$PATH' >> ~/.zprofile
+    source ~/.zprofile  #zshの場合
+    
+    # node.js
+    nodebrew ls-remote  #インストール可能リスト
+    mkdir ~/.nodebrew
+    mkdir ~/.nodebrew/src
+    nodebrew install-binary <version>  or  nodebrew install-binary stable   or   nodebrew install-binary latest
+    nodebrew ls  #インストールしたバージョン・現在のバージョンを確認
+    nodebrew use <version>  #バージョンを指定
+    node -v  #バージョンを確認
+    
 
 
 # AppStore
