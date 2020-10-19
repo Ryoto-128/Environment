@@ -15,7 +15,7 @@ brew cask install \
     slack \
     visual-studio-code \
     google-drive-file-stream \
-    wrk-trello
+
     
 
 # git
