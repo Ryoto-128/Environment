@@ -1,0 +1,13 @@
+# 初期
+npm init
+
+# クローン
+npm install
+
+# 共通
+npm install <package>
+  # -option
+  -g #globalにインストール
+
+npm run <script>
+  
