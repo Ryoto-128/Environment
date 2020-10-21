@@ -2,6 +2,8 @@
 Enter  # Rename
 command + F  # search
 command + shift + .  # Hidden files
+fn + backspace  # delete
+command + backspace  # file delete
 
 
 # vscode
