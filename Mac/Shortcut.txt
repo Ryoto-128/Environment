@@ -1,6 +1,7 @@
 # mac
 Enter  # Rename
 command + F  # search
+command + shift + .  # Hidden files
 
 
 # vscode
