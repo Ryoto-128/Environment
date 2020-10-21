@@ -20,6 +20,28 @@
 
     brew install git
     
+    # python
+    
+    #pyenv/pipenv
+    
+    brew install pyenv
+    brew install pipenv
+    
+    echo "eval '$(pyenv init -)'" >> ~/.bash_profile
+    echo 'export PYENV_ROOT=$HOME/.pyenv' >> ~/.bash_profile
+    echo 'export PATH=$PATH:$PYENV_ROOT/bin' >> ~/.bash_profile
+    source ~/.bash_profile #bashの場合
+    
+    echo "eval '$(pyenv init -)'" >> ~/.zprofile
+    echo 'export PYENV_ROOT=$HOME/.pyenv' >> ~/.zprofile
+    echo 'export PATH=$PATH:$PYENV_ROOT/bin' >> ~/.zprofile
+    source ~/.zprofile #zshの場合
+    
+    pyenv install --list
+    pyenv install <version>
+    pyenv global <version>
+    
+    
     # node.js
     
     # nodebrew:バージョン管理
@@ -43,3 +65,4 @@
 
 # AppStore
     trello
+    other soft....
