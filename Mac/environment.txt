@@ -16,6 +16,8 @@
         google-drive-file-stream \
         spotify \
         biscuit \
+        eclipse-java \
+        # eclipceはjavaの設定後
 
     # git
 
