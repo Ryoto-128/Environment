@@ -15,10 +15,59 @@
         visual-studio-code \
         google-drive-file-stream \
         spotify \
+        biscuit \
 
     # git
 
     brew install git
+    
+    
+    # java
+    
+    # jenv
+    mkdir ~/.jenv
+    brew install jenv
+    
+    echo 'export PATH="$HOME/.jenv/bin:$PATH"' >> ~/.bash_profile
+    echo 'eval "$(jenv init -)"' >> ~/.bash_profile
+    source ~/.bash_profile　#bashの場合
+    
+    echo 'export PATH="$HOME/.jenv/bin:$PATH"' >> ~/.zshrc
+    echo 'eval "$(jenv init -)"' >> ~/.zshrc 
+    source ~/.zprofile　# zshの場合
+    
+    jenv doctor # 動作確認
+        [OK]    No JAVA_HOME set
+        [ERROR] Java binary in path is not in the jenv shims.
+        [ERROR] Please check your path, or try using /path/to/java/home is not a valid path to java installation.
+            PATH : /Users/user/.jenv/libexec:/Users/user/.jenv/shims:/Users/user/.jenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+        [OK]    Jenv is correctly loaded
+        
+    echo ${JAVA_HOME}
+        null
+    jenv enable-plugin export
+    exec $SHELL -l
+    echo ${JAVA_HOME}
+        /Users/<user_name>/.jenv/versions/system
+        
+    # homebrew-cask-versions 
+    brew tap homebrew/cask-versions
+    
+    # java
+    brew cask install java
+    brew cask install oracle-jdk # Java SE 15
+    
+    /usr/libexec/java_home
+    jenv add $(/usr/libexec/java_home)
+    
+    jenv versions
+    
+    # local
+    jenv local <version>
+    
+    # global
+    jenv global <version>
+    jenv shell <version>
     
     # python
     
