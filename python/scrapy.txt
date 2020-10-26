@@ -1,0 +1,13 @@
+# scrapy
+  # install
+    pip install scrapy
+    scrapy version
+    
+  # project start
+    scrapy startproject <project name>
+    scrapy genspider <spider name> <target domain>
+    
+  # execution
+    scrapy crawl <spider name>
+    scrapy crawl scrapy_blog_spider -o data.csv
+  
