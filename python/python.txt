@@ -1,0 +1,25 @@
+# 初期設定
+  # pyenv
+    # install
+      pyenv install --list
+      pyenv install <version>
+    # version change
+      # version 確認
+        pyenv versions
+        python --version 
+      # version 変更
+        pyenv global <version>
+        pyenv local <version>
+        
+  #pipenv
+    # 既存 install
+      pipenv install
+    # install
+      pipenv --python <version>
+      pipenv install <package>
+    # 実行
+        pipenv run python main.py
+        
+        pipenv shell
+        exit
+    
