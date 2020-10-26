@@ -1,121 +1,111 @@
 # command line
     # Homebrew --------------------------------------------------------------------------------------------------------------------------
+        # Homebrew
+            /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+        # Homebrew-cask
+            export HOMEBREW_CASK_OPTS='--appdir=/Applications'
 
-    # Homebrew-cask
+    # GUIapp --------------------------------------------------------------------------------------------------------------------------
+        brew cask install \
+            google-chrome \
+            slack \
+            visual-studio-code \
+            google-drive-file-stream \
+            spotify \
+            biscuit \
+            microsoft-office \
+            eclipse-java \
+            # eclipceはjavaの設定後
 
-    export HOMEBREW_CASK_OPTS='--appdir=/Applications'
+    # git --------------------------------------------------------------------------------------------------------------------------
+        brew install git
+    
+    # java --------------------------------------------------------------------------------------------------------------------------
+        # jenv
+            mkdir ~/.jenv
+            brew install jenv
 
-    # GUIapp
+            echo 'export PATH="$HOME/.jenv/bin:$PATH"' >> ~/.bash_profile
+            echo 'eval "$(jenv init -)"' >> ~/.bash_profile
+            source ~/.bash_profile　#bashの場合
 
-    brew cask install \
-        google-chrome \
-        slack \
-        visual-studio-code \
-        google-drive-file-stream \
-        spotify \
-        biscuit \
-        microsoft-office \
-        eclipse-java \
-        # eclipceはjavaの設定後
+            echo 'export PATH="$HOME/.jenv/bin:$PATH"' >> ~/.zshrc
+            echo 'eval "$(jenv init -)"' >> ~/.zshrc 
+            source ~/.zprofile　# zshの場合
 
-    # git
+            jenv doctor # 動作確認
+                [OK]    No JAVA_HOME set
+                [ERROR] Java binary in path is not in the jenv shims.
+                [ERROR] Please check your path, or try using /path/to/java/home is not a valid path to java installation.
+                    PATH : /Users/user/.jenv/libexec:/Users/user/.jenv/shims:/Users/user/.jenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+                [OK]    Jenv is correctly loaded
 
-    brew install git
-    
-    
-    # java
-    
-    # jenv
-    mkdir ~/.jenv
-    brew install jenv
-    
-    echo 'export PATH="$HOME/.jenv/bin:$PATH"' >> ~/.bash_profile
-    echo 'eval "$(jenv init -)"' >> ~/.bash_profile
-    source ~/.bash_profile　#bashの場合
-    
-    echo 'export PATH="$HOME/.jenv/bin:$PATH"' >> ~/.zshrc
-    echo 'eval "$(jenv init -)"' >> ~/.zshrc 
-    source ~/.zprofile　# zshの場合
-    
-    jenv doctor # 動作確認
-        [OK]    No JAVA_HOME set
-        [ERROR] Java binary in path is not in the jenv shims.
-        [ERROR] Please check your path, or try using /path/to/java/home is not a valid path to java installation.
-            PATH : /Users/user/.jenv/libexec:/Users/user/.jenv/shims:/Users/user/.jenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
-        [OK]    Jenv is correctly loaded
-        
-    echo ${JAVA_HOME}
-        null
-    jenv enable-plugin export
-    exec $SHELL -l
-    echo ${JAVA_HOME}
-        /Users/<user_name>/.jenv/versions/system
-        
-    # homebrew-cask-versions 
-    brew tap homebrew/cask-versions
-    
-    # java
-    brew cask install java
-    brew cask install oracle-jdk # Java SE 15
-    
-    /usr/libexec/java_home
-    jenv add $(/usr/libexec/java_home)
-    
-    jenv versions
-    
-    # local
-    jenv local <version>
-    
-    # global
-    jenv global <version>
-    jenv shell <version>
-    
-    # python
-    
-    #pyenv/pipenv
-    
-    brew install pyenv
-    brew install pipenv
-    
-    echo "eval '$(pyenv init -)'" >> ~/.bash_profile
-    echo 'export PYENV_ROOT=$HOME/.pyenv' >> ~/.bash_profile
-    echo 'export PATH=$PATH:$PYENV_ROOT/bin' >> ~/.bash_profile
-    source ~/.bash_profile #bashの場合
-    
-    echo "eval '$(pyenv init -)'" >> ~/.zprofile
-    echo 'export PYENV_ROOT=$HOME/.pyenv' >> ~/.zprofile
-    echo 'export PATH=$PATH:$PYENV_ROOT/bin' >> ~/.zprofile
-    source ~/.zprofile #zshの場合
-    
-    pyenv install --list
-    pyenv install <version>
-    pyenv global <version>
-    pyenv rehash
-    
-    
-    # node.js
-    
-    # nodebrew:バージョン管理
-    
-    brew install nodebrew
-    echo 'export PATH=$PATH:$HOME/.nodebrew/current/bin' >> ~/.bash_profile
-    source ~/.bash_profile  #bashの場合
-    echo 'export PATH=$HOME/.nodebrew/current/bin:$PATH' >> ~/.zprofile
-    source ~/.zprofile  #zshの場合
-    
-    # node.js
-    nodebrew ls-remote  #インストール可能リスト
-    mkdir ~/.nodebrew
-    mkdir ~/.nodebrew/src
-    nodebrew install-binary <version>  or  nodebrew install-binary stable   or   nodebrew install-binary latest
-    nodebrew ls  #インストールしたバージョン・現在のバージョンを確認
-    nodebrew use <version>  #バージョンを指定
-    node -v  #バージョンを確認
-    
+            echo ${JAVA_HOME}
+                null
+            jenv enable-plugin export
+            exec $SHELL -l
+            echo ${JAVA_HOME}
+                /Users/<user_name>/.jenv/versions/system
 
+        # homebrew-cask-versions 
+            brew tap homebrew/cask-versions
 
-# AppStore
-    trello
-    other soft....
+        # java
+            brew cask install java
+            brew cask install oracle-jdk # Java SE 15
+
+            /usr/libexec/java_home
+            jenv add $(/usr/libexec/java_home)
+
+            jenv versions
+
+            # local
+                jenv local <version>
+
+            # global
+                jenv global <version>
+                jenv shell <version>
+    
+    # python --------------------------------------------------------------------------------------------------------------------------
+    
+        #pyenv/pipenv
+            brew install pyenv
+            brew install pipenv
+
+            echo "eval '$(pyenv init -)'" >> ~/.bash_profile
+            echo 'export PYENV_ROOT=$HOME/.pyenv' >> ~/.bash_profile
+            echo 'export PATH=$PATH:$PYENV_ROOT/bin' >> ~/.bash_profile
+            source ~/.bash_profile #bashの場合
+
+            echo "eval '$(pyenv init -)'" >> ~/.zprofile
+            echo 'export PYENV_ROOT=$HOME/.pyenv' >> ~/.zprofile
+            echo 'export PATH=$PATH:$PYENV_ROOT/bin' >> ~/.zprofile
+            source ~/.zprofile #zshの場合
+
+            pyenv install --list
+            pyenv install <version>
+            pyenv global <version>
+            pyenv rehash
+    
+    # node.js --------------------------------------------------------------------------------------------------------------------------
+    
+        # nodebrew:バージョン管理
+            brew install nodebrew
+            echo 'export PATH=$PATH:$HOME/.nodebrew/current/bin' >> ~/.bash_profile
+            source ~/.bash_profile  #bashの場合
+            echo 'export PATH=$HOME/.nodebrew/current/bin:$PATH' >> ~/.zprofile
+            source ~/.zprofile  #zshの場合
+
+        # node.js
+            nodebrew ls-remote  #インストール可能リスト
+            mkdir ~/.nodebrew
+            mkdir ~/.nodebrew/src
+            nodebrew install-binary <version>  or  nodebrew install-binary stable   or   nodebrew install-binary latest
+            nodebrew ls  #インストールしたバージョン・現在のバージョンを確認
+            nodebrew use <version>  #バージョンを指定
+            node -v  #バージョンを確認
+
+# AppStore --------------------------------------------------------------------------------------------------------------------------
+        trello
+        other soft....
