@@ -1,15 +1,17 @@
 # 開発環境構築の手順 </br> ~ Environment ~
 
 ## file tree
+```
 .
 ├── Mac
-│   ├── fuga
-│   └── fugafuga
+│   ├── environment.txt
+│   └── Shortcut.txt
 │   
 ├── python
-│   ├── fuga
-│   └── fugafuga
+│   └── nodejs.txt
+│   
 │
 └── javascript
-    ├── hoge
-    └── hogehoge
+    ├── python.txt
+    └── scrapy.txt
+```
