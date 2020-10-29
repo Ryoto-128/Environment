@@ -18,6 +18,7 @@
             spotify \
             biscuit \
             microsoft-office \
+            adobe-creative-cloud \
             eclipse-java \
             # eclipceはjavaの設定後
 
