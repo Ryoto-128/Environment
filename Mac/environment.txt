@@ -36,7 +36,7 @@
 
             echo 'export PATH="$HOME/.jenv/bin:$PATH"' >> ~/.zshrc
             echo 'eval "$(jenv init -)"' >> ~/.zshrc 
-            source ~/.zprofile　# zshの場合
+            source ~/.zshrc　# zshの場合
 
             jenv doctor # 動作確認
                 [OK]    No JAVA_HOME set
@@ -91,6 +91,27 @@
             pyenv install <version>
             pyenv global <version>
             pyenv rehash
+    
+    # ruby
+    
+        #rbenv/ruby-build/readline
+            brew install\
+                rbenv\
+                ruby-build\
+                readline
+        
+            echo ‘eval “$(rbenv init -)”‘ >> ~/.zprofile
+            source ~/.zprofile
+            
+            brew link readline --force
+            RUBY_CONFIGURE_OPTS='--with-readline-dir=$(brew --prefix readline)'
+            
+            rbenv install --list
+            rbenv install <version>
+            rbenv global <version>
+            rbenv rehash
+            
+            rbenv versions
     
     # node.js --------------------------------------------------------------------------------------------------------------------------
     
