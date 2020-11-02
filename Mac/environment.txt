@@ -70,8 +70,6 @@
             # global
                 jenv global <version>
                 jenv shell <version>
-                
-            rbenv init
     
     # python --------------------------------------------------------------------------------------------------------------------------
     
@@ -100,7 +98,7 @@
                 pyenv local <version>
                 pyenv rehash
     
-    # ruby
+    # ruby  --------------------------------------------------------------------------------------------------------------------------
     
         #rbenv/ruby-build/readline
             brew install\
@@ -120,9 +118,11 @@
             
             #global
                 rbenv global <version>
+                rbenv rehash
             
             #local
-                rbenv local <version>            
+                rbenv local <version>
+                rbenv rehash
             
             rbenv versions
     
