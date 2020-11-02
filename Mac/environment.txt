@@ -70,6 +70,8 @@
             # global
                 jenv global <version>
                 jenv shell <version>
+                
+            rbenv init
     
     # python --------------------------------------------------------------------------------------------------------------------------
     
@@ -89,8 +91,14 @@
 
             pyenv install --list
             pyenv install <version>
-            pyenv global <version>
-            pyenv rehash
+            
+            #global
+                pyenv global <version>
+                pyenv rehash
+                
+            #local
+                pyenv local <version>
+                pyenv rehash
     
     # ruby
     
