@@ -116,8 +116,13 @@
             
             rbenv install --list
             rbenv install <version>
-            rbenv global <version>
             rbenv rehash
+            
+            #global
+                rbenv global <version>
+            
+            #local
+                rbenv local <version>            
             
             rbenv versions
     
