@@ -63,13 +63,13 @@
             jenv add $(/usr/libexec/java_home)
 
             jenv versions
+            
+             # global
+                jenv global <version>
+                jenv shell <version>
 
             # local
                 jenv local <version>
-
-            # global
-                jenv global <version>
-                jenv shell <version>
     
     # python --------------------------------------------------------------------------------------------------------------------------
     
