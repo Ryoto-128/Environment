@@ -106,8 +106,13 @@
                 ruby-build\
                 readline
         
-            echo ‘eval “$(rbenv init -)”‘ >> ~/.zprofile
-            source ~/.zprofile
+            echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
+            echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
+            source ~/.bash_profile　#bashの場合
+
+            echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.zshrc
+            echo 'eval "$(rbenv init -)"' >> ~/.zshrc 
+            source ~/.zshrc　# zshの場合
             
             brew link readline --force
             RUBY_CONFIGURE_OPTS='--with-readline-dir=$(brew --prefix readline)'
