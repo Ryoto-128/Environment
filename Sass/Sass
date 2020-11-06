@@ -1,0 +1,3 @@
+# 開発環境構築
+  # コンパイル
+    sass --watch <sassfile_path>:<cssfile_path> --no-cache
