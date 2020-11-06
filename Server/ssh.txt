@@ -1,0 +1,35 @@
+#ssh接続
+
+  # xserver
+    # 秘密鍵のDownlord
+      url:[https://www.xserver.ne.jp/manual/man_server_ssh.php]
+    # 秘密鍵の設置
+      mkdir ~/.ssh
+      mv ~/Downloads/<server_name>.key ~/.ssh/
+    # 秘密鍵の名前変更
+      cd ~/.ssh/
+      mv <server_name>.key id_<xserver>_rsa
+    # 権限付与
+      chmod 700 ~/.ssh
+      chmod 600 ~/.ssh/id_xserver_rsa
+    # login
+      ssh -l <serverID> -i <秘密鍵_filename> <serverID>.xsrv.jp -p 10022
+      # パスフレーズを使用時
+        Enter passphrase for key 'id_rsa': <passphrase>
+    # 参考サイト
+      ・「エックスサーバーにssh接続する方法（ターミナル利用）」:[https://qiita.com/ryo2132/items/38b5a93b3df476dd2b44]
+    
+  # config
+    touch ~/.ssh/config
+    vim ~/.ssh/config
+    # config
+      Host <command_name> #任意のコマンド名
+      HostName <serverID>.xsrv.jp
+      Port 10022
+      User <serverID>
+      IdentityFile ~/.ssh/<秘密鍵_filename> #秘密鍵のファイル名
+      ServerAliveInterval 60 #sshの自動切断を防ぐために記述
+    #実行
+      ssh <command_name>
+    # 参考サイト
+      ・「.ssh/configファイルでSSH接続を管理する」:[https://qiita.com/0084ken/items/2e4e9ae44ec5e01328f1]
