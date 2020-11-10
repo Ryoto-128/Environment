@@ -1,0 +1,6 @@
+# 手順
+  # ドメイン設定
+    ・[サーバパネル/FTP/サブFTPアカウント設定/<対象ドメイン>/サブFTPアカウントの追加]にてサブFTPアカウントを追加
+    
+# 参考サイト
+  ・ 「FTPソフトの設定」:[https://www.xserver.ne.jp/manual/man_ftp_setting.php]
