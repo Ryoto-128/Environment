@@ -32,3 +32,6 @@
                 LOCAL_DIR: ./<dirname>/                   
                 REMOTE_DIR: /<dirname>/    
                 ARGS: --delete
+
+# 参考サイト
+  ・ 「Sass Build」:[https://github.com/marketplace/actions/sass-build]
