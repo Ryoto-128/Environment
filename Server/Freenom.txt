@@ -1,0 +1,9 @@
+   # 手順
+    ・アカウント作成
+    ・希望ドメインの入力
+    ・購入
+    ・[Top/Service/Mydomains/Manage Domain/Management Tools/Nameservers/Change Nameservers/]にてNameserverを変更
+    ~ ・各サーバにてドメイン設定
+   
+   # 参考サイト
+      ・「無料でドメインを取得|エックスサーバーで使う」:[https://domain-get.net/freenom-xserver/#i]
