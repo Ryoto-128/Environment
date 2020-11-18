@@ -4,6 +4,7 @@
             /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
         # Homebrew-cask
+            brew install cask
             export HOMEBREW_CASK_OPTS='--appdir=/Applications'
             
 # app --------------------------------------------------------------------------------------------------------------------------
