@@ -96,12 +96,14 @@
                 pyenv rehash
                 
                 pipenv --python <version>
+                pipenv shell
                 
             #local
                 pyenv local <version>
                 pyenv rehash
                 
                 pipenv --python <version>
+                pipenv shell
     
     # ruby  --------------------------------------------------------------------------------------------------------------------------
     
