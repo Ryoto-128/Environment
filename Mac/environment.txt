@@ -95,9 +95,13 @@
                 pyenv global <version>
                 pyenv rehash
                 
+                pipenv --python <version>
+                
             #local
                 pyenv local <version>
                 pyenv rehash
+                
+                pipenv --python <version>
     
     # ruby  --------------------------------------------------------------------------------------------------------------------------
     
