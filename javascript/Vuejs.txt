@@ -1,0 +1,11 @@
+# install
+  npm install -g @vue/cli
+  
+# version
+  vue --version
+
+# create project
+  vue create <project_name>
+  cd <project_name>
+  npm run serve
+  http://localhost:8080/
