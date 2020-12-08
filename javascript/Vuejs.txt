@@ -7,5 +7,10 @@
 # create project
   vue create <project_name>
   cd <project_name>
+  
+# deveropment
   npm run serve
   http://localhost:8080/
+
+#build
+  npm run build
