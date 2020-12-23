@@ -1,4 +1,4 @@
-# Tips Log / 知識の記録
+# Tips Log / 知識の記録 ※整理中
 
 学んだ技術を記録する。
 
@@ -7,9 +7,21 @@
 ```
 .
 ├── Backend
-│   └── python
-│       ├── python.txt
-│       └── scrapy.txt
+│   ├── JavaScript
+│   │   └── NodeJs
+│   │       ├── README.md
+│   │       └── npm
+│   │           └── README.md
+│   └── Python
+│       ├── FW
+│       │   ├── Scrapy
+│       │   │   ├── README.md
+│       │   │   └── scrapy.txt
+│       │   └── Selenium
+│       │       └── README.md
+│       ├── README.md
+│       └── pip
+│           └── README.md
 ├── Document
 │   └── Reademe
 │       └── ReademeTemplate.md
@@ -18,11 +30,10 @@
 │       ├── Shortcut.txt
 │       └── environment.txt
 ├── Frontend
-│   ├── Sass
-│   │   └── Sass.txt
-│   └── javascript
-│       ├── Vuejs.txt
-│       └── nodejs.txt
+│   ├── JavaScript
+│   │   └── Vuejs.txt
+│   └── Sass
+│       └── Sass.txt
 ├── Infrastructure
 │   ├── Domain
 │   │   ├── Freenom.txt
@@ -35,7 +46,7 @@
 ├── Platform
 │   └── GitHub
 │       └── GithubActions
-│           ├── READEME.md
+│           ├── README.md
 │           ├── compile_sass.md
 │           └── ftp_deploy.md
 └── README.md
