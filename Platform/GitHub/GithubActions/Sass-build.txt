@@ -1,0 +1,37 @@
+# 手順
+  ・ [/.github/workflows/main.yaml]を作成or変更
+  ・ main.yamlの設定 # <main.yamlの名前は変更可能>
+      on:
+        push:                 
+          branches:           
+            - main    
+      name: Deploy
+      jobs:
+        FTP-Deploy-Action:
+          name: FTP-Deploy-Action  
+          runs-on: ubuntu-latest 
+          steps:
+            - uses: actions/checkout@main
+            
+            # Sassのbuild
+            - name: Make destination directory for compiled CSS
+              run: mkdir -vp ./public_html/assets/css/  # 出力先dirの作成
+
+            - name: Compile CSS from SCSS files
+              uses: gha-utilities/sass-build@v0.2.9
+              with:
+                source: ./public_html/assets/sass/app.scss    # 入力先Fileの設定
+                destination: ./public_html/assets/css/app.css   # 出力先Fileの設定
+
+            - name: FTP-Deploy-Action
+              uses: SamKirkland/FTP-Deploy-Action@2.0.0   
+              env:                                        
+                FTP_SERVER: ${{ secrets.FTP_SERVER }}   
+                FTP_USERNAME: ${{ secrets.FTP_USERNAME }} 
+                FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }} 
+                LOCAL_DIR: ./<dirname>/                   
+                REMOTE_DIR: /<dirname>/    
+                ARGS: --delete
+
+# 参考サイト
+  ・ 「Sass Build」:[https://github.com/marketplace/actions/sass-build]
