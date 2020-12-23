@@ -38,7 +38,6 @@
 │           ├── READEME.md
 │           ├── compile_sass.md
 │           └── ftp_deploy.md
-├── README.md
-└── ReademeTemplate.md
+└── README.md
 ```
 
