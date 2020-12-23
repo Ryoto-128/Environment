@@ -106,3 +106,6 @@ This project is licensed under the MIT License - see the [LICENSE.md](https://qi
 - Inspiration / 何からインスピレーションを得たか
 - etc / その他
 
+## Reference
+
+- [良い README.md を書くためのテンプレート（翻訳）](https://qiita.com/KamataRyo/items/466255fc33da12274c72#project-title--%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%81%AE%E3%82%BF%E3%82%A4%E3%83%88%E3%83%AB)
