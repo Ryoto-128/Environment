@@ -1,21 +1,44 @@
-# ※稼働中
+# Tips Log / 知識の記録
 
-# 開発環境構築の手順 </br> ~ Environment ~
-## 概要
-環境構築やフレームワークといった技術の使い方を記載
+学んだ技術を記録する。
 
-## file tree
+## Directory Tree / ディレクトリ ツリー構造
+
 ```
 .
-├── Mac
-│   ├── environment.txt
-│   └── Shortcut.txt
-│   
-├── python
-│   └── nodejs.txt
-│   
-│
-└── javascript
-    ├── python.txt
-    └── scrapy.txt
+├── Backend
+│   └── python
+│       ├── python.txt
+│       └── scrapy.txt
+├── Document
+│   └── Reademe
+│       └── ReademeTemplate.md
+├── Environment
+│   └── Mac
+│       ├── Shortcut.txt
+│       └── environment.txt
+├── Frontend
+│   ├── Sass
+│   │   └── Sass.txt
+│   └── javascript
+│       ├── Vuejs.txt
+│       └── nodejs.txt
+├── Infrastructure
+│   ├── Domain
+│   │   ├── Freenom.txt
+│   │   └── freenom.md
+│   └── Server
+│       ├── Xserver
+│       │   ├── Domain.txt
+│       │   └── FTP.txt
+│       └── ssh.txt
+├── Platform
+│   └── GitHub
+│       └── GithubActions
+│           ├── READEME.md
+│           ├── compile_sass.md
+│           └── ftp_deploy.md
+├── README.md
+└── ReademeTemplate.md
 ```
+
