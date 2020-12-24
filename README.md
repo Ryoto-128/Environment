@@ -52,3 +52,19 @@
 └── README.md
 ```
 
+## Structural explanation / 構造説明
+
+```
+└── <Language_name>
+    ├── FW
+    │   ├── <Framework_name>
+    │   │   ├── README.md
+    │   │   └── <tips>.md
+    │   └── <Framework_name>
+    │       └── README.md
+    └── README.md
+    
+*README.md	# 言語やフレームワークの詳細
+						# 導入手順を記載。
+```
+

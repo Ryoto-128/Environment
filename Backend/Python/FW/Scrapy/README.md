@@ -1,52 +1,49 @@
-# Node.js
+# Scrapy
 
->  Node.js はスケーラブルなネットワークアプリケーションを構築するために設計された非同期型のイベント駆動の JavaScript 環境です。  By [Node.js](https://nodejs.org/ja/about/)
+>  Scrapyは、Webサイトをクロールし、構造化されたデータを抽出するためのアプリケーション・フレームワークです。データ・フレームワークは、データ・マイニング、情報処理、履歴アーカイブなど、さまざまな有用なアプリケーションに使用できます。
+>
+>  Scrapyは元々「ウェブ・スクレイピング([web scraping](https://en.wikipedia.org/wiki/Web_scraping))」用に設計されていましたが、API([Amazon Associates Web Services](https://affiliate-program.amazon.com/gp/advertising/api/detail/main.html) など)を使用してデータを抽出したり、汎用のWebクローラーとして使用することもできます。  By [doc-ja-scrapy](https://doc-ja-scrapy.readthedocs.io/ja/latest/intro/overview.html)
 
 ## Getting Started / スタートガイド
 
-"nodebrew"でバージョン管理を行い、"node"のインストールを行う。
+"pip"もしくは"pipenv"で、"scrapy"のインストールを行う。
 
 ### Prerequisites / 必要条件
 
-- "Homebrew"のインストール
+- "Python"のインストール
 
 ### Installing / インストール
 
-#### nodebrew
-
-"Homebrew" で"nodebrew"のインストールを行う。
+"pip"で、"scrapy"のインストールを行う。
 
 ```
-brew install nodebrew
-
-echo 'export PATH=$PATH:$HOME/.nodebrew/current/bin' >> ~/.bash_profile
-source ~/.bash_profile  #bashの場合
-echo 'export PATH=$HOME/.nodebrew/current/bin:$PATH' >> ~/.zprofile
-source ~/.zprofile  #zshの場合
+pip install scrapy
 ```
 
-#### node
-
-"nodebrew"で指定バージョン"node"のインストールを行う。
+### version / version確認
 
 ```
-nodebrew ls-remote  #インストール可能リスト
-mkdir ~/.nodebrew				#初回のみ
-mkdir ~/.nodebrew/src		#初回のみ
+scrapy version
+```
 
-nodebrew install-binary <version>		#指定バージョン
-or  
-nodebrew install-binary stable			#安定バージョン
-or
-nodebrew install-binary latest			#最新バージョン
+### Project start / 開発開始
 
-nodebrew ls  #インストールしたバージョン・現在のバージョンを確認
-nodebrew use <version>  #バージョンを指定
-node -v  #バージョンを確認
+#### Construction of Project environment / Project環境の構築
+
+```
+scrapy startproject <project name>　# Scrapyプロジェクトを作成
+scrapy genspider <spider name> <target domain>	# spidersフォルダーに新しいスパイダーを作成
+```
+
+#### Run / 実行
+
+```
+scrapy crawl <spider name>	# スパイダーを使用してクロールを開始
 ```
 
 
 
 ## Reference / 参考サイト
 
-- 不明
+- [Scrapy 1.7 文書](https://doc-ja-scrapy.readthedocs.io/ja/latest/topics/commands.html#std:command-crawl)
+

@@ -37,14 +37,6 @@ npm install <package>
 npm run <script>
 ```
 
-#### Cheatsheet / チートシート
-
-```
-
-```
-
-
-
 ## Reference / 参考サイト
 
 - 不明
