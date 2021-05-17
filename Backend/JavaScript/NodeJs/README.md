@@ -4,7 +4,7 @@
 
 ## Getting Started / スタートガイド
 
-"nodebrew"でバージョン管理を行い、"node"のインストールを行う。
+"nodenv"でバージョン管理を行い、"node"のインストールを行う。
 
 ### Prerequisites / 必要条件
 
@@ -12,16 +12,16 @@
 
 ### Installing / インストール
 
-#### nodebrew
+#### nodenv
 
-"Homebrew" で"nodebrew"のインストールを行う。
+"Homebrew" で"nodenv"のインストールを行う。
 
 ```
-brew install nodebrew
+brew install nodenv
 
-echo 'export PATH=$PATH:$HOME/.nodebrew/current/bin' >> ~/.bash_profile
+echo 'eval "$(nodenv init -)"' >> ~/.bash_profile
 source ~/.bash_profile  #bashの場合
-echo 'export PATH=$HOME/.nodebrew/current/bin:$PATH' >> ~/.zprofile
+echo 'eval "$(nodenv init -)"' >> ~/.zprofile
 source ~/.zprofile  #zshの場合
 ```
 
@@ -30,18 +30,17 @@ source ~/.zprofile  #zshの場合
 "nodebrew"で指定バージョン"node"のインストールを行う。
 
 ```
-nodebrew ls-remote  #インストール可能リスト
-mkdir ~/.nodebrew				#初回のみ
-mkdir ~/.nodebrew/src		#初回のみ
+nodenv install --list
+nodenv install <version>
 
-nodebrew install-binary <version>		#指定バージョン
-or  
-nodebrew install-binary stable			#安定バージョン
-or
-nodebrew install-binary latest			#最新バージョン
+# globalに設定する場合
+nodenv global <version>
+nodenv rehash
 
-nodebrew ls  #インストールしたバージョン・現在のバージョンを確認
-nodebrew use <version>  #バージョンを指定
+# localに設定する場合
+pyenv local <version>
+pyenv rehash
+
 node -v  #バージョンを確認
 ```
 
